@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-30)
+## Unreleased (2025-07-08)
 
 <section class="features">
 
@@ -34,6 +34,8 @@ This release closes the following issue:
 
 <details>
 
+-   [`a77644a`](https://github.com/stdlib-js/stdlib/commit/a77644ac6d491ff8693b0b02315b52a3d1659172) - **bench:** fix import path _(by Athan Reines)_
+-   [`c19cc6b`](https://github.com/stdlib-js/stdlib/commit/c19cc6bfcccf04aede87a6cb69578117db09704b) - **chore:** clean-up _(by Athan Reines)_
 -   [`f0bc703`](https://github.com/stdlib-js/stdlib/commit/f0bc703d30986a4f1c75a97f7b8928dc8bfd0dc2) - **feat:** add C implementation for `stats/base/dists/poisson/cdf` _(by Philipp Burckhardt)_
 -   [`28b78a0`](https://github.com/stdlib-js/stdlib/commit/28b78a0590907a6757bc6fd4c9e88d9109280950) - **bench:** refactor random number generation in `stats/base/dists/poisson` [(#5106)](https://github.com/stdlib-js/stdlib/pull/5106) _(by pranav-1720)_
 
@@ -47,8 +49,9 @@ This release closes the following issue:
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
+-   Athan Reines
 -   Philipp Burckhardt
 -   pranav-1720
 
