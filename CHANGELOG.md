@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-07-08)
+## Unreleased (2026-01-12)
 
 <section class="features">
 
@@ -34,6 +34,9 @@ This release closes the following issue:
 
 <details>
 
+-   [`fc438e0`](https://github.com/stdlib-js/stdlib/commit/fc438e0edbad0689d6923d6f3edb959b96597662) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
+-   [`07f7c05`](https://github.com/stdlib-js/stdlib/commit/07f7c0522c73e6ad9505e1d45035ae439344200d) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
+-   [`9c21fd2`](https://github.com/stdlib-js/stdlib/commit/9c21fd20ef8b8a6a88abb96d80ea6d8e4c5434eb) - **test:** use .strictEqual() instead of .equal() _(by Philipp Burckhardt)_
 -   [`a77644a`](https://github.com/stdlib-js/stdlib/commit/a77644ac6d491ff8693b0b02315b52a3d1659172) - **bench:** fix import path _(by Athan Reines)_
 -   [`c19cc6b`](https://github.com/stdlib-js/stdlib/commit/c19cc6bfcccf04aede87a6cb69578117db09704b) - **chore:** clean-up _(by Athan Reines)_
 -   [`f0bc703`](https://github.com/stdlib-js/stdlib/commit/f0bc703d30986a4f1c75a97f7b8928dc8bfd0dc2) - **feat:** add C implementation for `stats/base/dists/poisson/cdf` _(by Philipp Burckhardt)_
