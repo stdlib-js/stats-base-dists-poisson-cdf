@@ -48,7 +48,8 @@
     "@stdlib/stats-base-dists-degenerate-cdf": "^0.3.0",
     "@stdlib/utils-constant-function": "^0.2.2",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
-    "@stdlib/utils-library-manifest": "^0.2.3"
+    "@stdlib/utils-library-manifest": "^0.2.3",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.2"
   },
   "devDependencies": {
     "@stdlib/console-log-each-map": "^0.1.0",
