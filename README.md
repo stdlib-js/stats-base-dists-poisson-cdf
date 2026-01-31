@@ -58,25 +58,32 @@ where `lambda` is the mean parameter. Internally, the module evaluates the CDF b
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/stats-base-dists-poisson-cdf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import cdf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-poisson-cdf@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/stats-base-dists-poisson-cdf/tags). For example,
-
-```javascript
-import cdf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-poisson-cdf@v0.3.0-deno/mod.js';
-```
-
-You can also import the following named exports from the package:
-
-```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-poisson-cdf@deno/mod.js';
+var cdf = require( '@stdlib/stats-base-dists-poisson-cdf' );
 ```
 
 #### cdf( x, lambda )
@@ -148,9 +155,9 @@ y = mycdf( 8.0 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import cdf from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-poisson-cdf@deno/mod.js';
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var cdf = require( '@stdlib/stats-base-dists-poisson-cdf' );
 
 var opts = {
     'dtype': 'float64'
@@ -165,7 +172,87 @@ logEachMap( 'x: %0.4f, λ: %0.4f, F(x;λ): %0.4f', x, lambda, cdf );
 
 <!-- /.examples -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/stats/base/dists/poisson/cdf.h"
+```
+
+#### stdlib_base_dists_poisson_cdf( x, lambda )
+
+Evaluates the [cumulative distribution function][cdf] for a [Poisson][poisson-distribution] distribution with mean parameter `lambda`.
+
+```c
+double out = stdlib_base_dists_poisson_cdf( 2.0, 0.5 );
+// returns ~0.986
+
+out = stdlib_base_dists_poisson_cdf( 2.0, 10.0 );
+// returns ~0.003
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` input value.
+-   **lambda**: `[in] double` mean parameter.
+
+```c
+double stdlib_base_dists_poisson_cdf( const double x, const double lambda );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/stats/base/dists/poisson/cdf.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+static double random_uniform( double min, double max ) {
+    double scale = rand() / (double) RAND_MAX;
+    return min + ( scale * ( max - min ) );
+}
+
+int main( void ) {
+    double lambda;
+    double x;
+    double y;
+    int i;
+
+    for ( i = 0; i < 25; i++ ) {
+        x = random_uniform( 0.0, 10.0 );
+        lambda = random_uniform( 0.1, 20.0 );
+        y = stdlib_base_dists_poisson_cdf( x, lambda );
+        printf( "x: %lf, λ: %lf, F(x;λ): %lf\n", x, lambda, y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -184,7 +271,7 @@ logEachMap( 'x: %0.4f, λ: %0.4f, F(x;λ): %0.4f', x, lambda, cdf );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -214,8 +301,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/stats-base-dists-poisson-cdf.svg
 [npm-url]: https://npmjs.org/package/@stdlib/stats-base-dists-poisson-cdf
 
-[test-image]: https://github.com/stdlib-js/stats-base-dists-poisson-cdf/actions/workflows/test.yml/badge.svg?branch=v0.3.0
-[test-url]: https://github.com/stdlib-js/stats-base-dists-poisson-cdf/actions/workflows/test.yml?query=branch:v0.3.0
+[test-image]: https://github.com/stdlib-js/stats-base-dists-poisson-cdf/actions/workflows/test.yml/badge.svg?branch=main
+[test-url]: https://github.com/stdlib-js/stats-base-dists-poisson-cdf/actions/workflows/test.yml?query=branch:main
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/stats-base-dists-poisson-cdf/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/stats-base-dists-poisson-cdf?branch=main
