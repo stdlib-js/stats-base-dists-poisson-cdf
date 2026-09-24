@@ -2,6 +2,40 @@
 
 > Package changelog.
 
+<section class="release" id="unreleased">
+
+## Unreleased (2026-09-24)
+
+<section class="commits">
+
+### Commits
+
+<details>
+
+-   [`3e0c944`](https://github.com/stdlib-js/stdlib/commit/3e0c944bc75edb84e95e5aaa8fd9c14b7ebd9e29) - **test:** migrate `stats/base/dists/poisson/cdf` to ULP-based assertions [(#15466)](https://github.com/stdlib-js/stdlib/pull/15466) _(by Ujjwal Verma)_
+
+</details>
+
+</section>
+
+<!-- /.commits -->
+
+<section class="contributors">
+
+### Contributors
+
+A total of 1 person contributed to this release. Thank you to this contributor:
+
+-   Ujjwal Verma
+
+</section>
+
+<!-- /.contributors -->
+
+</section>
+
+<!-- /.release -->
+
 <section class="release" id="v0.3.1">
 
 ## 0.3.1 (2026-02-08)
